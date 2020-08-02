@@ -8,10 +8,23 @@
 
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- <img src="logo.png" alt="logo"> -->
+      <div class="container">
+          <div class="card" v-for="item in info">
+            <h1>fullName: {{ item.fullName }}</h1>
+            <p> category: {{ item.category }}</p>
+            <p> createdAt: {{ item.createdAt }}</p>
+
+          </div>
+      </div>
+    </div>
     <script src="scripts.js"></script>
   </body>
+
 </html>
