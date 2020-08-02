@@ -7,7 +7,7 @@ new Vue({
   },
   mounted() {
     axios
-      .get('http://api.reydar.com/api/Products')
+      .get('https://api.reydar.com/api/Products')
       .then(response => {
         this.info = response.data
         console.log(response.data)
